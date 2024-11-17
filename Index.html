@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Tempo</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="time-container">
+        <!-- Imagem acima do título -->
+        <img src="imagem/anitta.png" alt="Descrição da imagem" class="header-image">
+
+        <h1>Juntos há</h1>
+
+        <div class="time-blocks-container">
+            <div class="numbers-container">
+                <!-- Bloco de anos -->
+                <div class="time-block" id="years-block">
+                    <span id="years">0</span>
+                    <div class="label" id="year-label">ano</div>
+                </div>
+                <div class="separator"></div>
+                <!-- Bloco de dias -->
+                <div class="time-block" id="days-block">
+                    <span id="days">0</span>
+                    <div class="label" id="days-label">dias</div>
+                </div>
+                <div class="separator"></div>
+                <!-- Bloco de horas -->
+                <div class="time-block" id="hours-block">
+                    <span id="hours">0</span>
+                    <div class="label" id="hours-label">horas</div>
+                </div>
+                <div class="separator"></div>
+                <!-- Bloco de minutos -->
+                <div class="time-block" id="minutes-block">
+                    <span id="minutes">0</span>
+                    <div class="label" id="minutes-label">minutos</div>
+                </div>
+                <div class="separator"></div>
+                <!-- Bloco de segundos -->
+                <div class="time-block" id="seconds-block">
+                    <span id="seconds">0</span>
+                    <div class="label" id="seconds-label">segundos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="audio-container">
+            <audio id="audio" preload="metadata" autoplay controls loop>
+                <source src="música/Mil Veces.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <h2>Início: 22/10/2023 às 14:00:00</h2>
+
+        <footer class="footer">
+            <address>
+                Criação e Desenvolvimento: <a href="mailto:euygorcastro@gmail.com" target="_blank">Ygor Castro</a> &copy; 22-06-2024 - <a href="https://www.linkedin.com/in/iamygorcastro/" target="_blank">YC</a>
+            </address>
+        </footer>
+    </div>
+
+    <script src="Scripts.js"></script>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('audio');
+            audio.muted = false;
+            audio.play();
+        };
+    </script>
+</body>
+</html>
